@@ -1,5 +1,6 @@
 body{
     font-family: 'Montserrat', sans-serif;
+    margin: 0;
 }
 
 section {
@@ -34,6 +35,8 @@ ul {
     justify-content: space-around;
     font-size: 30px;
 }
+
+
 
 li{
     /* width: 200px; */
@@ -124,6 +127,7 @@ padding: 80px;
 .headshot {
     width: 300px;
     border-radius: 150px;
+    margin-left: 80px;
 }
 
 .headshot-container {
@@ -176,15 +180,38 @@ a {
     display: none;
 }
 
-@media only screen and(max-width:1000px) {
-    .hamburger{ 
-    display: block; 
-    border: 0;
-    background-color: transparent;
-    color: white;
-    font-size: 30px;
+.hamburger:focus{
+    outline: 0;
+}
+
+@media only screen and (max-width: 1000px) {
+    .hamburger {
+        display: block;
+        border: 0;
+        background-color: transparent;
+        color: white;
+        font-size: 30px;
+        margin: 20px;
+        align-self: flex-end;
     }
-    .ul{
+
+    ul {
+        display: none;
+        background-color: #2b2c38;
+        margin: 0ppx;
+    }
+
+    ul.show {
+        display: block;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column-reverse;
+        background-color: #2b2c38;
+    }
+
+    .logo {
         display: none;
     }
 }
